@@ -1,0 +1,110 @@
+{
+  "format": "gymnote-training-programs",
+  "version": 1,
+  "programs": [
+    {
+      "name": "Зал — 3 дня (45 минут)",
+      "days": [
+        {
+          "name": "Понедельник — верх тела A",
+          "exercises": [
+            {
+              "exerciseId": "system:dumbbell-bench-press",
+              "targetSets": 4,
+              "targetRepetitionsMin": 8,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:seated-cable-row",
+              "targetSets": 4,
+              "targetRepetitionsMin": 10,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:seated-dumbbell-press",
+              "targetSets": 3,
+              "targetRepetitionsMin": 10,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:lat-pulldown",
+              "targetSets": 3,
+              "targetRepetitionsMin": 10,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            }
+          ]
+        },
+        {
+          "name": "Среда — низ и кор",
+          "exercises": [
+            {
+              "exerciseId": "system:squat",
+              "targetSets": 4,
+              "targetRepetitionsMin": 8,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:romanian-deadlift",
+              "targetSets": 3,
+              "targetRepetitionsMin": 10,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:lunge",
+              "targetSets": 3,
+              "targetRepetitionsMin": 12,
+              "targetRepetitionsMax": 12,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:plank",
+              "targetSets": 3,
+              "targetRepetitionsMin": null,
+              "targetRepetitionsMax": null,
+              "targetDurationSeconds": 40
+            }
+          ]
+        },
+        {
+          "name": "Пятница — верх тела B",
+          "exercises": [
+            {
+              "exerciseId": "system:barbell-row",
+              "targetSets": 4,
+              "targetRepetitionsMin": 8,
+              "targetRepetitionsMax": 8,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:bench-press",
+              "targetSets": 4,
+              "targetRepetitionsMin": 8,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:one-arm-dumbbell-row",
+              "targetSets": 3,
+              "targetRepetitionsMin": 10,
+              "targetRepetitionsMax": 10,
+              "targetDurationSeconds": null
+            },
+            {
+              "exerciseId": "system:incline-dumbbell-reverse-fly",
+              "targetSets": 3,
+              "targetRepetitionsMin": 15,
+              "targetRepetitionsMax": 15,
+              "targetDurationSeconds": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
