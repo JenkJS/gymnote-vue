@@ -2,14 +2,19 @@
 import { useI18n } from 'vue-i18n'
 import { setAppLocale } from '../i18n'
 const { t, locale } = useI18n()
+const logoUrl = `${import.meta.env.BASE_URL}brand/gymnote-icon-192.png`
 </script>
 
 <template>
   <header class="app-header">
     <div class="app-header__inner">
       <div class="app-header__brand">
-        <h1 class="app-header__title">GYMNOTE</h1>
-        <p class="app-header__subtitle">{{ t('header.subtitle') }}</p>
+        <img class="app-header__logo" :src="logoUrl" alt="" width="48" height="48" />
+
+        <div class="app-header__brand-copy">
+          <h1 class="app-header__title">GYMNOTE</h1>
+          <p class="app-header__subtitle">{{ t('header.subtitle') }}</p>
+        </div>
       </div>
 
       <div class="language-switcher" role="group" :aria-label="t('header.language')">
@@ -52,6 +57,19 @@ const { t, locale } = useI18n()
 }
 
 .app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-header__logo {
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.app-header__brand-copy {
   display: grid;
   gap: 0.25rem;
   text-align: center;
@@ -114,7 +132,7 @@ const { t, locale } = useI18n()
     justify-content: space-between;
   }
 
-  .app-header__brand {
+  .app-header__brand-copy {
     text-align: left;
   }
 }

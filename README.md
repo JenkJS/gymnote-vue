@@ -2,9 +2,13 @@
 
 **English** · [Русский](README.ru.md)
 
-> A local-first workout journal built with Vue 3 — training programs, exercises, sets, and progress history without a required account or backend.
+![GYMNOTE — Local-first workout journal](public/brand/gymnote-social-preview-1200x630.png)
 
-GYMNOTE lets you start a workout in seconds, record actual weights and reps, or launch a prebuilt training day from an imported program. Everything is stored locally in the browser and remains available after a reload.
+> Track every set. Beat your last workout.
+
+GYMNOTE is a workout journal that remembers what you did last time. Start a workout in seconds, record actual weights and reps, or launch a prebuilt training day from an imported program. No account or backend is required, and your data stays in your browser.
+
+**[Try the live demo](https://jenkjs.github.io/gymnote-vue/)**
 
 ## Features
 

@@ -7,7 +7,7 @@ export const en = {
     retry: 'Try again',
   },
   header: {
-    subtitle: 'Workout diary',
+    subtitle: 'Track every set',
     language: 'Interface language',
   },
   exercise: {

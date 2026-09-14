@@ -7,7 +7,7 @@ export const ru = {
     retry: 'Повторить',
   },
   header: {
-    subtitle: 'Дневник тренировок',
+    subtitle: 'Записывай каждый подход',
     language: 'Язык интерфейса',
   },
   exercise: {
