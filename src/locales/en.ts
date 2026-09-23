@@ -6,9 +6,19 @@ export const en = {
     saving: 'Saving…',
     retry: 'Try again',
   },
+  pageTitle: {
+    workout: 'Workout',
+    programs: 'Programs',
+    history: 'History',
+    notFound: 'Page not found',
+  },
   header: {
     subtitle: 'Track every set',
     language: 'Interface language',
+    navigation: 'Main navigation',
+    workout: 'Workout',
+    programs: 'Programs',
+    history: 'History',
   },
   exercise: {
     catalog: {
@@ -102,6 +112,8 @@ export const en = {
   },
   history: {
     title: 'History',
+    empty: 'Your completed workouts will appear here.',
+    loadError: 'Could not load workout history.',
     date: 'Date',
     duration: 'Duration',
     exercises: 'Exercises',
@@ -112,5 +124,10 @@ export const en = {
     freeWorkout: 'Free workout',
     exerciseResults: 'Exercise results',
     noSets: 'No completed sets',
+  },
+  notFound: {
+    title: 'Page not found',
+    description: 'The page you requested does not exist or has been moved.',
+    backToWorkout: 'Back to workout',
   },
 } satisfies LocaleMessages

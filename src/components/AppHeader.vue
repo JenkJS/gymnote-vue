@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { setAppLocale } from '../i18n'
+import { RouterLink } from 'vue-router'
+import { ROUTE_NAMES } from '@/router'
+
 const { t, locale } = useI18n()
 const logoUrl = `${import.meta.env.BASE_URL}brand/gymnote-icon-192.png`
 </script>
@@ -16,7 +19,37 @@ const logoUrl = `${import.meta.env.BASE_URL}brand/gymnote-icon-192.png`
           <p class="app-header__subtitle">{{ t('header.subtitle') }}</p>
         </div>
       </div>
-
+      <nav class="app-navigation" :aria-label="t('header.navigation')">
+        <ul class="app-navigation__list">
+          <li>
+            <RouterLink
+              class="app-navigation__link"
+              exact-active-class="app-navigation__link--active"
+              :to="{ name: ROUTE_NAMES.workout }"
+            >
+              {{ t('header.workout') }}
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              class="app-navigation__link"
+              exact-active-class="app-navigation__link--active"
+              :to="{ name: ROUTE_NAMES.programs }"
+            >
+              {{ t('header.programs') }}
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              class="app-navigation__link"
+              exact-active-class="app-navigation__link--active"
+              :to="{ name: ROUTE_NAMES.history }"
+            >
+              {{ t('header.history') }}
+            </RouterLink>
+          </li>
+        </ul>
+      </nav>
       <div class="language-switcher" role="group" :aria-label="t('header.language')">
         <button
           class="language-switcher__button"
@@ -134,6 +167,46 @@ const logoUrl = `${import.meta.env.BASE_URL}brand/gymnote-icon-192.png`
 
   .app-header__brand-copy {
     text-align: left;
+  }
+}
+.app-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+}
+
+.app-navigation__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.875rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.app-navigation__link--active {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+}
+
+.app-navigation__link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .app-navigation__link:hover:not(.app-navigation__link--active) {
+    color: var(--color-text);
+    background-color: var(--color-border);
   }
 }
 </style>

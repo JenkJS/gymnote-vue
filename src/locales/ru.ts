@@ -6,9 +6,19 @@ export const ru = {
     saving: 'Сохранение…',
     retry: 'Повторить',
   },
+  pageTitle: {
+    workout: 'Тренировка',
+    programs: 'Программы',
+    history: 'История',
+    notFound: 'Страница не найдена',
+  },
   header: {
     subtitle: 'Записывай каждый подход',
     language: 'Язык интерфейса',
+    navigation: 'Основная навигация',
+    workout: 'Тренировка',
+    programs: 'Программы',
+    history: 'История',
   },
   exercise: {
     catalog: {
@@ -102,6 +112,8 @@ export const ru = {
   },
   history: {
     title: 'История',
+    empty: 'Здесь появятся завершённые тренировки.',
+    loadError: 'Не удалось загрузить историю тренировок.',
     date: 'Дата',
     duration: 'Длительность',
     exercises: 'Упражнения',
@@ -112,5 +124,10 @@ export const ru = {
     freeWorkout: 'Свободная тренировка',
     exerciseResults: 'Результаты упражнений',
     noSets: 'Нет выполненных подходов',
+  },
+  notFound: {
+    title: 'Страница не найдена',
+    description: 'Запрошенная страница не существует или была перемещена.',
+    backToWorkout: 'Вернуться к тренировке',
   },
 } satisfies LocaleMessages

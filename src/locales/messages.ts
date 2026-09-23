@@ -4,9 +4,19 @@ export type LocaleMessages = {
     saving: string
     retry: string
   }
+  pageTitle: {
+    workout: string
+    programs: string
+    history: string
+    notFound: string
+  }
   header: {
     subtitle: string
     language: string
+    navigation: string
+    workout: string
+    programs: string
+    history: string
   }
   exercise: {
     catalog: {
@@ -100,6 +110,8 @@ export type LocaleMessages = {
   }
   history: {
     title: string
+    empty: string
+    loadError: string
     date: string
     duration: string
     exercises: string
@@ -110,5 +122,10 @@ export type LocaleMessages = {
     freeWorkout: string
     exerciseResults: string
     noSets: string
+  }
+  notFound: {
+    title: string
+    description: string
+    backToWorkout: string
   }
 }

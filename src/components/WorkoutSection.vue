@@ -1,34 +1,30 @@
 <script setup lang="ts">
 import { systemExercises } from '@/domain/exercise/systemExercises'
 import WorkoutExerciseCard from './WorkoutExerciseCard.vue'
-import { useWorkoutSession } from '@/composables/useWorkoutSession'
 import WorkoutTimer from './WorkoutTimer.vue'
-import WorkoutHistory from './WorkoutHistory.vue'
-import TrainingProgramsSection from './TrainingProgramsSection.vue'
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { storeToRefs } from 'pinia'
+
+import { useWorkoutStore } from '@/stores/workout'
 
 const { t } = useI18n()
-
+const workoutStore = useWorkoutStore()
 const {
-  activeWorkout,
-  completedWorkouts,
-  isLoading,
-  hasLoadError,
   loadWorkouts,
   startWorkout,
-  startWorkoutFromProgramDay,
   finishWorkout,
   addExercise,
   addSet,
   addDurationSet,
   removeSet,
-  isSaving,
-  hasSaveError,
   retrySave,
   updateSet,
   updateDurationSet,
-} = useWorkoutSession()
+} = workoutStore
+const { activeWorkout, completedWorkouts, isLoading, hasLoadError, isSaving, hasSaveError } =
+  storeToRefs(workoutStore)
+
 const selectedExerciseId = ref('')
 
 const previousProgramWorkout = computed(() => {
@@ -87,11 +83,6 @@ function finishActiveWorkout() {
 
 <template>
   <div class="workout-view">
-    <TrainingProgramsSection
-      :can-start-workout="!activeWorkout"
-      @start-program-day="startWorkoutFromProgramDay"
-    />
-
     <p v-if="isLoading" class="workout-state" role="status">{{ t('common.loading') }}</p>
     <div v-else-if="hasLoadError" class="workout-state workout-state--error" role="alert">
       <p>{{ t('workout.errors.load') }}</p>
@@ -207,10 +198,6 @@ function finishActiveWorkout() {
         </p>
       </form>
     </section>
-    <WorkoutHistory
-      v-if="!isLoading && !hasLoadError && completedWorkouts.length > 0"
-      :workouts="completedWorkouts"
-    />
   </div>
 </template>
 

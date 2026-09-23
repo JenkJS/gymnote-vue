@@ -1,13 +1,22 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { RouterView } from 'vue-router'
+
 import AppHeader from './components/AppHeader.vue'
-import WorkoutSection from './components/WorkoutSection.vue'
+import { useWorkoutStore } from '@/stores/workout'
+
+const workoutStore = useWorkoutStore()
+
+onMounted(() => {
+  void workoutStore.loadWorkouts()
+})
 </script>
 
 <template>
   <div class="app">
     <AppHeader />
     <main class="app__content">
-      <WorkoutSection />
+      <RouterView />
     </main>
   </div>
 </template>

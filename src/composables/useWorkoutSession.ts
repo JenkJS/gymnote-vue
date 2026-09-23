@@ -1,4 +1,4 @@
-import { onMounted, ref, toRaw } from 'vue'
+import { ref, toRaw } from 'vue'
 
 import { workoutRepository } from '@/infrastructure/repositories/DexieWorkoutRepository'
 import type { WorkoutRepository } from '@/repositories/workoutRepository'
@@ -317,9 +317,6 @@ export function useWorkoutSession(repository: WorkoutRepository = workoutReposit
       isSaving.value = false
     }
   }
-  onMounted(() => {
-    void loadWorkouts()
-  })
 
   return {
     activeWorkout,
